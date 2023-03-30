@@ -1,4 +1,4 @@
-'https://www.hackerrank.com/challenges/three-month-preparation-kit-time-conversion/problem'
+// https://www.hackerrank.com/challenges/three-month-preparation-kit-time-conversion/problem
 
 function timeConversion(s) {
   const morning = 'AM'

@@ -1,4 +1,4 @@
-'https://www.hackerrank.com/challenges/three-month-preparation-kit-countingsort1/problem'
+// https://www.hackerrank.com/challenges/three-month-preparation-kit-countingsort1/problem
 
 const countingSort = (arr) => {
   const occurances = new Array(arr.length).fill(0)

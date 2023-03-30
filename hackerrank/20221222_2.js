@@ -1,4 +1,4 @@
-'www.hackerrank.com/challenges/three-month-preparation-kit-breaking-best-and-worst-records/problem'
+// www.hackerrank.com/challenges/three-month-preparation-kit-breaking-best-and-worst-records/problem
 
 function breakingRecords(scores) {
   let currentMaxScore = null

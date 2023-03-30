@@ -1,4 +1,4 @@
-'https://www.hackerrank.com/challenges/three-month-preparation-kit-plus-minus/problem'
+// https://www.hackerrank.com/challenges/three-month-preparation-kit-plus-minus/problem
 
 function plusMinus(arr) {
   const listLength = arr.length

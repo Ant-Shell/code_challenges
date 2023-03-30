@@ -1,4 +1,4 @@
-'https://www.hackerrank.com/challenges/three-month-preparation-kit-grading/problem'
+// https://www.hackerrank.com/challenges/three-month-preparation-kit-grading/problem
 
 function gradingStudents(grades) {
   const results = grades.map(grade => {

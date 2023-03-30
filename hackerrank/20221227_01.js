@@ -1,4 +1,4 @@
-'https://www.hackerrank.com/challenges/three-month-preparation-kit-camel-case/problem'
+// https://www.hackerrank.com/challenges/three-month-preparation-kit-camel-case/problem
 
 function processData(input) {
   const inputValueSplit = input.split('\r\n')

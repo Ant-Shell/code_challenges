@@ -1,4 +1,4 @@
-'https://leetcode.com/problems/rotate-array/'
+// https://leetcode.com/problems/rotate-array/
 
 const rotate = (nums, k) => {
   const rotator = (nums, low, high) => {

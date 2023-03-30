@@ -1,4 +1,4 @@
-'https://leetcode.com/problems/isomorphic-strings/'
+// https://leetcode.com/problems/isomorphic-strings/
 
 const isIsomorphic = (s,t) => {
   const sList = s.split("")
