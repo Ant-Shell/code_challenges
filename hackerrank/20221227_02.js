@@ -1,4 +1,4 @@
-'https://www.hackerrank.com/challenges/three-month-preparation-kit-divisible-sum-pairs/problem'
+// https://www.hackerrank.com/challenges/three-month-preparation-kit-divisible-sum-pairs/problem
 
 function divisibleSumPairs(n, k, ar) {
   const listLength = n

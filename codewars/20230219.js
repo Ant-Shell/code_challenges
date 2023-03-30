@@ -1,4 +1,4 @@
-'https://www.codewars.com/kata/515decfd9dcfc23bb6000006/train/javascript'
+// https://www.codewars.com/kata/515decfd9dcfc23bb6000006/train/javascript
 
 const isValidIP = (str) => {
   const ipList = str.split(".")

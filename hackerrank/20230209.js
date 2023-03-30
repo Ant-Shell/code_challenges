@@ -1,4 +1,4 @@
-'https://www.hackerrank.com/challenges/three-month-preparation-kit-diagonal-difference/problem'
+// https://www.hackerrank.com/challenges/three-month-preparation-kit-diagonal-difference/problem
 
 function diagonalDifference(arr) {
   let diagSum = 0

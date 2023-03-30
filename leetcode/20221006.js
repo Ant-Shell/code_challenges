@@ -1,4 +1,4 @@
-'https://leetcode.com/problems/richest-customer-wealth/'
+// https://leetcode.com/problems/richest-customer-wealth/
 
 const maximumWealth = (accounts) => {
   let accountsTotalList = []

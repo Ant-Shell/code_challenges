@@ -1,4 +1,4 @@
-'https://leetcode.com/problems/contains-duplicate/'
+// https://leetcode.com/problems/contains-duplicate/
 
 const containsDuplicate = (nums) => {
   const sortedNums = nums.sort((a,b) => a - b)

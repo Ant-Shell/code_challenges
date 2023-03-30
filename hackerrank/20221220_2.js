@@ -1,4 +1,4 @@
-'https://www.hackerrank.com/challenges/three-month-preparation-kit-mini-max-sum/problem'
+// https://www.hackerrank.com/challenges/three-month-preparation-kit-mini-max-sum/problem
 
 function miniMaxSum(arr) {
   const list_01 = new Array(...arr)

@@ -1,4 +1,4 @@
-'https://www.hackerrank.com/challenges/three-month-preparation-kit-counting-valleys/problem'
+// https://www.hackerrank.com/challenges/three-month-preparation-kit-counting-valleys/problem
 
 const countingValleys = (steps, path) => {
   const pathList = path.split("")

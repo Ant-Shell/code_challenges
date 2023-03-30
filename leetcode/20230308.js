@@ -1,4 +1,4 @@
-'https://leetcode.com/problems/find-pivot-index/'
+// https://leetcode.com/problems/find-pivot-index/
 
 const pivotIndex = (nums) => {
   let sum = 0

@@ -1,4 +1,4 @@
-'https://www.hackerrank.com/challenges/three-month-preparation-kit-sparse-arrays/problem'
+// https://www.hackerrank.com/challenges/three-month-preparation-kit-sparse-arrays/problem
 
 const matchingStrings = (strings, queries) => {
   const returnVal = new Array()

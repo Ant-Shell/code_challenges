@@ -1,4 +1,4 @@
-'https://www.codewars.com/kata/517abf86da9663f1d2000003/train/javascript'
+// https://www.codewars.com/kata/517abf86da9663f1d2000003/train/javascript
 
 const toCamelCase = (str) => {
   let modifiedStr = ''
