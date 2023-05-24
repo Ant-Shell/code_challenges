@@ -1,4 +1,4 @@
-// Neetcode - Arrays & Hashing #2
+// Neetcode - Arrays & Hashing Problem 2
 // https://leetcode.com/problems/valid-anagram/
 
 /* 
