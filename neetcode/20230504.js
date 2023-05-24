@@ -1,4 +1,4 @@
-// https://neetcode.io/roadmap - Arrays & Hashing 1
+// https://neetcode.io/roadmap - Arrays & Hashing Problem 1
 
 // https://leetcode.com/problems/contains-duplicate/
 
