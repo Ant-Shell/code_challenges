@@ -17,16 +17,27 @@ Given an integer array nums and an integer k, return the k most frequent element
 //   return occuranceList.map(num => num[0]).slice(0, k)
 // } // 85 ms
 
+// const topKFrequent = (nums, k) => {
+//   const occuranceHash = nums.reduce((acc, curr, i) => {
+//     Object.hasOwn(acc, nums[i]) ? 
+//     acc[nums[i]] += 1 : 
+//     acc[nums[i]] = 1
+//     return acc
+//   }, {})
+//   const occuranceList = Object.entries(occuranceHash).sort((a,b) => b[1] - a[1])
+//   return occuranceList.map(num => num[0]).slice(0, k)
+// } // 76 ms
+
 const topKFrequent = (nums, k) => {
-  const occuranceHash = nums.reduce((acc, curr, i) => {
-    Object.hasOwn(acc, nums[i]) ? 
-    acc[nums[i]] += 1 : 
-    acc[nums[i]] = 1
+  const occuranceHash = nums.reduce((acc, curr) => {
+    Object.hasOwn(acc, curr) ? 
+    acc[curr] += 1 : 
+    acc[curr] = 1
     return acc
   }, {})
   const occuranceList = Object.entries(occuranceHash).sort((a,b) => b[1] - a[1])
   return occuranceList.map(num => num[0]).slice(0, k)
-} // 76 ms
+} // 73 ms
 
 console.log(topKFrequent([1,1,1,2,2,3], 2))
 console.log(topKFrequent([1], 1))
