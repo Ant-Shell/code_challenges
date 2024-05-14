@@ -21,16 +21,8 @@ const furthestDistanceFromOrigin = function(moves) {
     moves[i] === 'R' ? rightCount++ :
     spaceCount++
   }
-
-  if (leftCount > rightCount) {
-    leftCount += spaceCount
-  } else if (leftCount < rightCount) {
-    rightCount += spaceCount
-  } else {
-    return spaceCount
-  }
   
-  return Math.abs(rightCount - leftCount)
+  return Math.abs(rightCount - leftCount) + spaceCount
 };
 
 console.log(furthestDistanceFromOrigin("L_RL__R"))
