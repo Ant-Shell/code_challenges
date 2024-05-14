@@ -21,16 +21,8 @@ const furthestDistanceFromOrigin = function(moves) {
     moves[i] === 'R' ? rightCount++ :
     spaceCount++
   }
-
-  if (leftCount > rightCount) {
-    leftCount += spaceCount
-  } else if (leftCount < rightCount) {
-    rightCount += spaceCount
-  } else {
-    return spaceCount
-  }
   
-  return Math.abs(rightCount - leftCount)
+  return Math.abs(rightCount - leftCount) + spaceCount
 };
 
 console.log(furthestDistanceFromOrigin("L_RL__R"))
@@ -43,8 +35,5 @@ Initialze a counter for the number of 'L' occurrences
 Initialze a counter for the number of 'R' occurrences
 Initialze a counter for the number of '_' occurrences
 Loop through the moves string and increment the applicable counter, upon occurance of 'L', 'R', or '_'
-If number of L's is > R's, add the number of '_' occurrences to 'L' total
-If number of R's is > L's, add the number of '_' occurrences to 'R' total
-If number of L's and R's is a tie, return the number of '_' occurrences
-Return absolute value of (R's - L's)
+Return absolute value of (R's - L's) + spaceCount
 */
