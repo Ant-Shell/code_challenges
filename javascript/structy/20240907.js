@@ -15,3 +15,11 @@ const anagrams = (s1, s2) => {
 
 console.log(anagrams('restful', 'fluster')) // true
 console.log(anagrams('cats', 'tocs')) // false
+
+/* 
+Pseudocode:
+- Split the strings into an array of substrings
+- Sort the substrings
+- Rejoin the substrings into a sorted string
+- Compare the sorted substrings
+*/
