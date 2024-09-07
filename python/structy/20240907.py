@@ -7,14 +7,6 @@ The function should return a boolean indicating whether or not the strings are a
 Anagrams are strings that contain the same characters, but in any order.
 '''
 
-"""
-const anagrams = (s1, s2) => {
-  const s1Sorted = s1.split("").sort().join("")
-  const s2Sorted = s2.split("").sort().join("")
-  return s1Sorted === s2Sorted
-};
-"""
-
 def anagrams(s1, s2):
   s1_dict = {}
   s2_dict = {}
