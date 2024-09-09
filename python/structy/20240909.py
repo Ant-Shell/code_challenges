@@ -27,14 +27,14 @@ def most_frequent_char(s):
 print(most_frequent_char('mississippi'))
 
 '''
-- Initialize an empty object charCount for keeping a character count (character: occurrences)
-- Initialize an empty string returnChar for the character that will be returned
+- Initialize an empty dict char_count for keeping a character count (character: occurrences)
+- Initialize an empty string return_char for the character that will be returned
 - Loop through the characters in the string
-  - If charCount does not have a key that is string object at index char, create the key with a value of zero
+  - If char_count does not have a key that is string object at index char, create the key with a value of zero
   - Increment by one
-- Loop through the keys of charCount object
-  - If returnChar strictly equals and empty string, or if the value of charCount[key] is greater than
-  charCount[returnChar], give returnChar the value of key
-  Note: If there is a tie here, returnChar will remain the character that appears earlier in the string
-- Return returnChar
+- Loop through the keys of char_count dict
+  - If return_char strictly equals and empty string, or if the value of char_count[key] is greater than
+  char_count[returnChar], give return_char the value of key
+  Note: If there is a tie here, return_char will remain the character that appears earlier in the string
+- Return return_char
 '''
