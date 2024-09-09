@@ -27,6 +27,7 @@ def most_frequent_char(s):
 print(most_frequent_char('mississippi'))
 
 '''
+Pseudocode:
 - Initialize an empty dict char_count for keeping a character count (character: occurrences)
 - Initialize an empty string return_char for the character that will be returned
 - Loop through the characters in the string
