@@ -17,7 +17,7 @@ You can assume that the input only contains alphabetic characters.
 
 const compress = (s) => {
   let i = 0
-  let j = 1
+  let j = 0
   const result = []
 
   while (i < s.length) {
@@ -27,7 +27,7 @@ const compress = (s) => {
       s.slice(i,j).length === 1 ?
       result.push(previous)
       :
-      result.push(s.slice(i,j).length + previous)
+      result.push(s.slice(i,j).length, previous)
       i = j
     } else {
       j++
