@@ -13,21 +13,43 @@ The function should return the array.
 Elements that are not 5 can appear in any order in the output, as long as all 5s are at the end of the array.
 */
 
-const fiveSort = (nums) => {
-  let fiveCount = 0
+// const fiveSort = (nums) => {
+//   let fiveCount = 0
 
-  for (let i = 0 ; i < nums.length; i++) {
+//   for (let i = 0 ; i < nums.length; i++) {
+//     if (nums[i] === 5) {
+//       nums.splice(i, 1)
+//       i--
+//       fiveCount++
+//     }
+//   }
+//   while (fiveCount > 0) {
+//     nums.push(5)
+//     fiveCount--
+//   }
+//   return nums
+// }
+
+const fiveSort = (nums) => {
+  let i = 0
+  let j = nums.length - 1
+
+  while (i < j) {
     if (nums[i] === 5) {
-      nums.splice(i, 1)
-      i--
-      fiveCount++
+      swap(nums, i, j)
+    } else {
+      i++
+    }
+
+    if (nums[j] === 5) {
+      j--
     }
   }
-  while (fiveCount > 0) {
-    nums.push(5)
-    fiveCount--
-  }
   return nums
+}
+
+const swap = (arr, i, j) => {
+  [arr[i], arr[j]] = [arr[j], arr[i]]
 }
 
 console.log(fiveSort([12, 5, 1, 5, 12, 7])) // -> [12, 7, 1, 12, 5, 5] 
