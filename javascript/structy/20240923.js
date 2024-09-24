@@ -60,19 +60,16 @@ console.log(fiveSort([5, 1, 2, 5, 5, 3, 2, 5, 1, 5, 5, 5, 4, 5])) // -> [4, 1, 2
 
 /* 
 Pseudocode:
-- Initialize fiveCount as zero
-
-# Note - This removes all 5s from the array and counts occurences:
-- Loop through the nums array argument
+- Initialize variable i as zero and j as the length of the nums array argument minus one
+- While i is less than j
   - If nums at index i strictly equals 5
-    - Splice the nums array at index i by one
-    - Decrement i
-    - Increment fiveCount
-
-# Note, this adds the 5s to the end of the nums array, in place:
-- While fiveCount is greater than zero
-  - Push the number 5 to then end of the nums array
-  - Decrememt fiveCount
-
+    - Call the swap function with nums, i and j as arguments
+  - Else
+    - Increment i
+  - If nums at index j strictly equals 5
+    - Increment j
 - Return nums
+
+The swap function has arr, i and j as parameters and swaps the values of arr at index i and
+arr at index j, in place
 */
