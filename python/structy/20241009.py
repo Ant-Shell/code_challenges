@@ -36,12 +36,12 @@ z = Node(100)
 ## Solution 1:
 # def sum_list(head):
 #   current = head
-#   returnVal = 0
+#   return_val = 0
 
 #   while current is not None:
-#     returnVal += current.val
+#     return_val += current.val
 #     current = current.next
-#   return returnVal
+#   return return_val
 
 '''
 Pseudocode:
