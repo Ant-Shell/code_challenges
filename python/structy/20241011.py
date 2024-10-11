@@ -31,6 +31,7 @@ c.next = d
 ## Test 3:
 node1 = Node(42)
 
+## Solution 1:
 # def linked_list_find(head, target):
 #   current = head
 #   while current is not None:
@@ -51,6 +52,7 @@ Pseudocode:
 - Return False as a default
 '''
 
+## Solution 2:
 def linked_list_find(head, target):
   if head == None:
     return False
