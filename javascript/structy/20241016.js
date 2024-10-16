@@ -33,7 +33,7 @@ const node2 = new Node("mango");
 
 node1.next = node2;
 
-
+// ## Solution 1:
 // const getNodeValue = (head, index) => {
 //   current = head
 //   currentIndex = 0
@@ -66,6 +66,7 @@ Pseudocode:
 - Return null as the default
 */
 
+// ## Solution 2:
 const getNodeValue = (head, index) => {
   const nodeValueIndex = 0
   if (head === null) {
