@@ -17,8 +17,8 @@ You may assume that both input lists are non-empty.
 
 class Node {
   constructor(val) {
-    this.val = val
-    this.next = null
+    this.val = val;
+    this.next = null;
   }
 }
 
@@ -36,7 +36,6 @@ class Node {
 // x.next = y;
 // y.next = z;
 // x -> y -> z
-
 
 // ## Test 2:
 const a = new Node("a");
@@ -59,7 +58,6 @@ x.next = y;
 y.next = z;
 // x -> y -> z
 
-
 // ## Test 3:
 // const s = new Node("s");
 // const t = new Node("t");
@@ -75,7 +73,6 @@ y.next = z;
 // three.next = four;
 // 1 -> 2 -> 3 -> 4
 
-
 // ## Test 4:
 // const w = new Node("w");
 
@@ -86,8 +83,7 @@ y.next = z;
 // const three = new Node(3);
 // one.next = two;
 // two.next = three;
-// 1 -> 2 -> 3 
-
+// 1 -> 2 -> 3
 
 // ## Test 5:
 const one = new Node(1);
@@ -95,41 +91,58 @@ const two = new Node(2);
 const three = new Node(3);
 one.next = two;
 two.next = three;
-// 1 -> 2 -> 3 
+// 1 -> 2 -> 3
 
 const w = new Node("w");
 // w
 
+// const zipperLists = (head1, head2) => {
+//   let tail = head1
+//   let current1 = head1.next
+//   let current2 = head2
+//   let count = 0
+
+//   while (current1 !== null && current2 !== null) {
+//     if (count % 2 == 0) { // Even -> add node from list 2 to tail
+//       tail.next = current2
+//       current2 = current2.next
+//     } else { // Odd -> add node from list 1 to tail
+//       tail.next = current1
+//       current1 = current1.next
+//     }
+//     tail = tail.next // tail becomes tail.next
+//     count += 1 // increase count
+//   }
+//   // Whichever current is not null, add to the end of the tail
+//   if (current1 !== null) {
+//     tail.next = current1
+//   }
+//   if (current2 !== null) {
+//     tail.next = current2
+//   }
+//   return head1
+// }
+
 const zipperLists = (head1, head2) => {
-  let tail = head1
-  let current1 = head1.next
-  let current2 = head2
-  let count = 0
+  if (head1 === null && head2 === null) {
+    return null
+  }
+  if (head1 === null) {
+    return head2
+  }
+  if (head2 === null) {
+    return head1
+  }
 
-  while (current1 !== null && current2 !== null) {
-    if (count % 2 == 0) { // Even = add node from list 2 to tail
-      tail.next = current2
-      current2 = current2.next
-    } else { // Odd = add node from list 1 to tail
-      tail.next = current1
-      current1 = current1.next
-    }
-    tail = tail.next // tail becomes tail.next
-    count += 1 // increase count
-  }
-  // Whichever current is not null, add to the end of the tail
-  if (current1 !== null) {
-    tail.next = current1
-  }
-  if (current2 !== null) {
-    tail.next = current2
-  }
+  const next1 = head1.next
+  const next2 = head2.next
+  head1.next = head2
+  head2.next = zipperLists(next1, next2)
   return head1
-}
-
+};
 
 // console.log(zipperLists(a, x)) // a -> x -> b -> y -> c -> z
-console.log(zipperLists(a, x)) // a -> x -> b -> y -> c -> z -> d -> e -> f
+console.log(zipperLists(a, x)); // a -> x -> b -> y -> c -> z -> d -> e -> f
 // console.log(zipperLists(s, one)) // s -> 1 -> t -> 2 -> 3 -> 4
 // console.log(zipperLists(w, one)) // w -> 1 -> 2 -> 3
-console.log(zipperLists(one, w)) // 1 -> w -> 2 -> 3
+console.log(zipperLists(one, w)); // 1 -> w -> 2 -> 3
