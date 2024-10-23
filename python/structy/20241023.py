@@ -85,30 +85,23 @@ c.right = f
 #          e
 
 
-def depth_first_values(root):
-  stack = deque() # Doubly Ended Queue from collections module
-  values = []
-  current_node = None
+# def depth_first_values(root):
+#   stack = deque() # Doubly Ended Queue from collections module
+#   values = []
+#   current_node = None
 
-  if not root:
-    return values
+#   if not root:
+#     return values
   
-  stack.append(root)
-  while stack:
-    current_node = stack.pop()
-    values.append(current_node.val)
-    if current_node.right:
-      stack.append(current_node.right)
-    if current_node.left:
-      stack.append(current_node.left)
-  return values
-
-print(depth_first_values(a)) #   -> ['a', 'b', 'd', 'e', 'c', 'f']
-# print(depth_first_values(a)) #   -> ['a', 'b', 'd', 'e', 'g', 'c', 'f']
-# print(depth_first_values(a)) #   -> ['a']
-# print(depth_first_values(a)) #   -> ['a', 'b', 'c', 'd', 'e']
-# print(depth_first_values(None)) # -> []
-
+#   stack.append(root)
+#   while stack:
+#     current_node = stack.pop()
+#     values.append(current_node.val)
+#     if current_node.right:
+#       stack.append(current_node.right)
+#     if current_node.left:
+#       stack.append(current_node.left)
+#   return values
 
 '''
 Pseudocode:
@@ -128,3 +121,32 @@ Pseudocode:
 - Repeat until the stack is empty
 - Return the values list
 '''
+
+## Recursive solution:
+def depth_first_values(root):
+  if root is None:
+    return []
+  left_values = depth_first_values(root.right)
+  right_values = depth_first_values(root.left)
+  return [ root.val, *left_values, *right_values]
+
+'''
+- Notes: 
+  - The stack is built into the recursion under the hood; recursive calls with the respective child
+      nodes will give a list of the all the nodes on the left and right of the tree
+  - The return is a concatenation of the root value, plus the unpacked values in the
+      list results of left_values and right_values
+  - * is an unpacking operator for lists and tuples (sort of like spread operator '...' in JavaScript)
+  - ** is the unpacking operator for dictionaries
+'''
+
+print(depth_first_values(a)) #   -> ['a', 'b', 'd', 'e', 'c', 'f']
+# print(depth_first_values(a)) #   -> ['a', 'b', 'd', 'e', 'g', 'c', 'f']
+# print(depth_first_values(a)) #   -> ['a']
+# print(depth_first_values(a)) #   -> ['a', 'b', 'c', 'd', 'e']
+# print(depth_first_values(None)) # -> []
+
+
+
+
+
