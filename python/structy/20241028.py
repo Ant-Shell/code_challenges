@@ -61,22 +61,22 @@ c.right = f
 #    /       \
 #   2         2
 
-# Depth First (Stack - LIFO):
-# def tree_sum(root):
-#   if root is None:
-#     return 0
+## Depth First (Stack - LIFO):
+def tree_sum(root):
+  if root is None:
+    return 0
 
-#   stack = deque([root])
-#   sum = 0
+  stack = deque([root])
+  sum = 0
 
-#   while stack:
-#     current = stack.pop()
-#     sum += current.val
-#     if current.left is not None:
-#       stack.append(current.left)
-#     if current.right is not None:
-#       stack.append(current.right)
-#   return sum
+  while stack:
+    current = stack.pop()
+    sum += current.val
+    if current.left is not None:
+      stack.append(current.left)
+    if current.right is not None:
+      stack.append(current.right)
+  return sum
 
 '''
 Pseudocode:
@@ -96,13 +96,13 @@ Pseudocode:
 - After the while loop has completed, return the integer value of "sum"
 '''
 
-# Recursive (Stack - LIFO):
-def tree_sum(root):
-  if root is None: # Base case
-    return 0
-  sum_left = tree_sum(root.left)
-  sum_right = tree_sum(root.right)
-  return root.val + sum_left + sum_right
+## Recursive (Stack - LIFO):
+# def tree_sum(root):
+#   if root is None: # Base case
+#     return 0
+#   sum_left = tree_sum(root.left)
+#   sum_right = tree_sum(root.right)
+#   return root.val + sum_left + sum_right
 '''
 Pseudocode:
 - Define node class
@@ -116,7 +116,7 @@ Pseudocode:
   of zero to the unwinding of the stack values in the "sum_left" and "sum_right" variables
 '''
 
-# Breadth First (Queue - FIFO):
+## Breadth First (Queue - FIFO):
 # def tree_sum(root):
 #   if root is None:
 #     return 0
