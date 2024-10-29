@@ -112,7 +112,7 @@ Pseudocode:
 - Declare sum_left as the recursive call of tree_sum, with argument of root.left
 - Declare sum_right as the recursive call of tree_sum, with argument of root.right
 - Return the root.val + the value of sum_left + the value of sum_right
-- This works because once root is None for both recursive calls, it will add the return
+- Note: This works because once root is None for both recursive calls, it will add the return
   of zero to the unwinding of the stack values in the "sum_left" and "sum_right" variables
 '''
 
