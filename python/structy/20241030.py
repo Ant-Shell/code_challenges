@@ -181,7 +181,7 @@ Pseudocode:
 - Declare right_subtree as the recursive call of tree_includes, with arguments root.right and "target"
 - Return left_subtree or right_subtree
 - Note: This works because if any of the values in the unwiding phase of the call stack are True,
-  then the return valie is True, otherwise the return value is False
+  then the return value is True, otherwise the return value is False
 '''
 
 ## Breadth First (Queue - FIFO)
