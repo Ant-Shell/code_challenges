@@ -50,15 +50,15 @@ class MyStack:
 
   def push(self, x: int) -> None:
     input = deque([x])
-    self.stack = self.stack + input
+    self.stack = input + self.stack
 
   def pop(self) -> int:
-    popped = self.stack[-1]
-    del self.stack[-1]
+    popped = self.stack[0]
+    del self.stack[0]
     return popped
 
   def top(self) -> int:
-    return self.stack[-1]
+    return self.stack[0]
 
   def empty(self) -> bool:
     return len(self.stack) == 0
