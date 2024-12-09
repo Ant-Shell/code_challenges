@@ -83,13 +83,14 @@ Pseudocode:
 - Initialize MyStack property stack as an empty deque
 - push method:
   - Initialize input variable as a deque containing argument of x
-  - Reassign self.stack as self.stack + input (concatenated)
+  - Reassign self.stack as input + self.stack (concatenated)
+  - Note: This pushes to the end of the queue
 - pop method:
-  - Declare popped variable and assign it the value at the top of the stack
-  - Delete the value at the top of the stack
+  - Declare popped variable and assign it the value at the end of the queue
+  - Delete the value at the end of the queue
   - Return the value of popped
 - top method:
-  - Return the value at the top of the stack
+  - Return the value at the at the end of the queue
 - empty method:
   - Return whether the lenght of self.stack is equal to zero
 '''
