@@ -68,8 +68,8 @@ Pseudocode:
 - Precompile all letters and their occurrences
 - Loop through the map of letters and their occurrences
   - Locate the letters that have occurrences >= 3
-    - subtract 2 from the value until it thr value is <= 2
-  - Keep doing this until all characters in the mapping have <= 2 occurrences
+    - subtract 2 from the value until it the value is < 3
+  - Keep doing this until all characters in the mapping have < 3 occurrences
 - Return the length of the string
   - Sum of all values in the occurrences dict
 - Note: O(n) time complexity, but could be refactored for better preformance
