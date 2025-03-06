@@ -1,6 +1,8 @@
 '''
 https://leetcode.com/problems/count-total-number-of-colored-cells/description/
 
+Count Total Number of Colored Cells
+
 There exists an infinitely large two-dimensional grid of uncolored unit cells. You are given a positive integer n, indicating that you must do the following routine for n minutes:
 
 At the first minute, color any arbitrary unit cell blue.
@@ -34,12 +36,12 @@ class Solution:
       return 1
     
     # n^2
-    left_side = math.pow(n, 2)
+    x = math.pow(n, 2)
 
     # (n - 1)^2
-    right_side = math.pow((n - 1), 2)
+    y = math.pow((n - 1), 2)
 
-    return math.floor(left_side + right_side)
+    return math.floor(x + y)
 
 solution = Solution()
 
