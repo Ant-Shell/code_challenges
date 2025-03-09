@@ -42,7 +42,6 @@ class Solution:
     result = []
 
     for num in range(len(sorted_arr)):
-      if sorted_arr[num] not in rank_map:
         rank_map[sorted_arr[num]] = rank_value
         rank_value +=1
 
