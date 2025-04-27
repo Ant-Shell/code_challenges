@@ -50,8 +50,8 @@ const isPerfectSquare = (num) => {
   return false
 }
 
-console.log(isPerfectSquare(16))
-console.log(isPerfectSquare(14))
+console.log(isPerfectSquare(16)) // -> true
+console.log(isPerfectSquare(14)) // -> false
 
 
 /* 
